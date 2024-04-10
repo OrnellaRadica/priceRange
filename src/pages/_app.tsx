@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main
-      className={`${inter.className} flex  flex-col items-center p-24`}
+      className={`${inter.className} flex  flex-col items-center p-8 sm:p-24`}
     >
       <Component {...pageProps} />
     </main>

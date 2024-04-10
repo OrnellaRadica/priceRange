@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 const BUTTON_WIDTH = 16;
 
-function findClosestStep(
+export function findClosestStep(
   value: number,
   steps: number[],
   min: number,
@@ -141,6 +141,7 @@ export function Dot({
       style={{
         left: `calc(${percentageMove}% - ${BUTTON_WIDTH / 2}px)`,
       }}
+      data-testid={`${position}-dot`}
     />
   );
 }

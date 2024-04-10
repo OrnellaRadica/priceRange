@@ -55,12 +55,15 @@ export function Range({ min, max, steps }: RangeProps) {
       <div className="flex items-center gap-4">
         <div className="flex flex-nowrap font-light">
           {steps ? (
-            <p className="w-16">{valueFirstDot}</p>
+            <p className="w-16" data-testid="price-left">
+              {valueFirstDot}
+            </p>
           ) : (
             <InputNumber
               handleChange={handleFirstDot}
               value={valueFirstDot}
               error={errorFirstDot}
+              position="left"
             />
           )}
           <span>€</span>
@@ -95,12 +98,15 @@ export function Range({ min, max, steps }: RangeProps) {
 
         <div className="flex flex-nowrap font-light">
           {steps ? (
-            <p className="w-16">{valueSecondDot}</p>
+            <p className="w-16" data-testid="price-right">
+              {valueSecondDot}
+            </p>
           ) : (
             <InputNumber
               handleChange={handleSecondDot}
               value={valueSecondDot}
               error={errorSecondDot}
+              position="right"
             />
           )}
           <span>€</span>
